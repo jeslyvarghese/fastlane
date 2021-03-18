@@ -435,7 +435,7 @@ module Frameit
           i.interline_spacing(interline_spacing) if interline_spacing
           i.fill(@config[key.to_s]['color'])
           i.direction("right-to-left") if ["ar", "arc", "dev", "fa", "ha", "he", "khw", "ks", "ku", "ps", "ur", "yi"].include? screenshot.language
-          i << "label:\"#{text}\""
+          i << "label:\"#{text.encode("ISO-8859-1")}\""
         end
 
         results[key] = text_image
