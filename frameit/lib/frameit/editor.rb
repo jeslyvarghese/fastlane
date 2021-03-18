@@ -432,7 +432,7 @@ module Frameit
           i.weight(@config[key.to_s]['font_weight']) if @config[key.to_s]['font_weight']
           i.gravity("Center")
           i.pointsize(actual_font_size(key))
-          i.draw("text 0,0 '#{text}'")
+          i.annotate("+0 +0 '#{text}'")
           i.interline_spacing(interline_spacing) if interline_spacing
           i.fill(@config[key.to_s]['color'])
           i.flop if ["ar", "arc", "dev", "fa", "ha", "he", "khw", "ks", "ku", "ps", "ur", "yi"].include? screenshot.language
