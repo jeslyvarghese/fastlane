@@ -435,6 +435,7 @@ module Frameit
           i.draw("text 0,0 '#{text}'")
           i.interline_spacing(interline_spacing) if interline_spacing
           i.fill(@config[key.to_s]['color'])
+          i.flop if ["ar", "arc", "dev", "fa", "ha", "he", "khw", "ks", "ku", "ps", "ur", "yi"].include? screenshot.language
         end
 
         results[key] = text_image
